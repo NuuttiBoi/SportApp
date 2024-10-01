@@ -13,8 +13,7 @@
 After successfully running the SportsLogger application, you will be presented with a console menu that provides several options. Follow the steps below to effectively use the application:
 
  **Starting the Application**: 
-   - Run the application as described in the [Getting Started](#getting-started) section. 
-   - Once the application starts, you will see the main menu.
+   - Run the application from the SportLogger class.
 
 **Menu Options**:
    The menu displays the following options:
