@@ -13,12 +13,15 @@ public class SportsLogger {
         durations = new ArrayList<>();
     }
 
+    // logs an activity
     public void logActivity(String activityName, int duration) {
         activities.add(activityName);
         durations.add(duration);
         System.out.println("Activity logged: " + activityName + " for " + duration + " minutes.");
     }
 
+
+    // lets user inspect the activities they have logged
     public void viewActivities() {
         if (activities.isEmpty()) {
             System.out.println("No activities logged.");
@@ -30,6 +33,7 @@ public class SportsLogger {
         }
     }
 
+    // Calculates total time spent on activities
     public int calculateTotalTime() {
         int totalTime = 0;
         for (int duration : durations) {
@@ -38,7 +42,7 @@ public class SportsLogger {
         return totalTime;
     }
 
-    // New method to handle the interactive part of the application
+    // Runs the logger
     public void run() {
         Scanner scanner = new Scanner(System.in);
         int choice;
@@ -77,11 +81,11 @@ public class SportsLogger {
             }
         } while (choice != 4);
 
-        scanner.close(); // Close scanner when done
+        scanner.close();
     }
 
     public static void main(String[] args) {
         SportsLogger logger = new SportsLogger();
-        logger.run(); // Call the run method to start the interactive console
+        logger.run();
     }
 }
