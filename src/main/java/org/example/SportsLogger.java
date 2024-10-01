@@ -4,13 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class SportsActivity {
-    private String activityName;
-    private int duration;
+public class SportsLogger {
     private List<String> activities;
     private List<Integer> durations;
 
-    public SportsActivity() {
+    public SportsLogger() {
         activities = new ArrayList<>();
         durations = new ArrayList<>();
     }
@@ -40,8 +38,8 @@ public class SportsActivity {
         return totalTime;
     }
 
-    public static void main(String[] args) {
-        SportsActivity logger = new SportsActivity();
+    // New method to handle the interactive part of the application
+    public void run() {
         Scanner scanner = new Scanner(System.in);
         int choice;
 
@@ -53,20 +51,21 @@ public class SportsActivity {
             System.out.println("4. Exit");
             System.out.print("Enter your choice: ");
             choice = scanner.nextInt();
-            scanner.nextLine();
+            scanner.nextLine(); // Consume the newline character
+
             switch (choice) {
                 case 1:
                     System.out.print("Enter activity name: ");
                     String activityName = scanner.nextLine();
                     System.out.print("Enter duration in minutes: ");
                     int duration = scanner.nextInt();
-                    logger.logActivity(activityName, duration);
+                    logActivity(activityName, duration);
                     break;
                 case 2:
-                    logger.viewActivities();
+                    viewActivities();
                     break;
                 case 3:
-                    int totalTime = logger.calculateTotalTime();
+                    int totalTime = calculateTotalTime();
                     System.out.println("Total time spent on sports this week: " + totalTime + " minutes");
                     break;
                 case 4:
@@ -78,6 +77,11 @@ public class SportsActivity {
             }
         } while (choice != 4);
 
-        scanner.close();
+        scanner.close(); // Close scanner when done
+    }
+
+    public static void main(String[] args) {
+        SportsLogger logger = new SportsLogger();
+        logger.run(); // Call the run method to start the interactive console
     }
 }
