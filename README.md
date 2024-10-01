@@ -1,4 +1,4 @@
-# SportsLogger
+# SportApp
 
 -a simple Java application that allows users to log their sports activities, view the logged activities, and calculate the total time spent on sports for the week. 
 ## Features
@@ -8,9 +8,9 @@
 - **Calculate Total Time**: Users can calculate the total time spent on sports for the week.
 
 
-## How to Use the SportsLogger Application
+## How to Use the Application
 
-After successfully running the SportsLogger application, you will be presented with a console menu that provides several options. Follow the steps below to effectively use the application:
+After successfully running the application, you will be presented with a console menu that provides several options. Follow the steps below to effectively use the application:
 
  **Starting the Application**: 
    - Run the application from the SportLogger class.
